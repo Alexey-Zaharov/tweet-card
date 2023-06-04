@@ -1,0 +1,109 @@
+.UserCard {
+  position: relative;
+  width: 340px;
+  height: 420px;
+  padding: 20px;
+
+  background: linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  );
+  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
+}
+
+.UserList {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ebd8ff;
+  text-align: center;
+}
+
+.UserItem {
+}
+
+.UserCardLogo {
+  position: absolute;
+}
+
+.Img {
+  display: block;
+  width: 308px;
+  height: 168px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 88px;
+  /* background-image: url(./Picture.png); */
+}
+
+.UserPhoto {
+  z-index: 999;
+
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 150px;
+  top: 178px;
+  border-radius: 85.9232px;
+  background: #ebd8ff;
+  box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+    inset 0px -2.19582px 4.39163px #ae7be3,
+    inset 0px 4.39163px 3.29372px #fbf8ff;
+}
+
+.UserImg {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  left: 9.48px;
+  top: 9.42px;
+  border-radius: 85.9232px;
+  background-color: #ae7be3;
+}
+
+.Line {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  left: 0px;
+  top: 214px;
+  /* margin-bottom: 68px; */
+
+  background: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+    inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
+}
+
+.UserCardButton {
+  display: block;
+  width: 196px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  /* font-family: "Montserrat"; */
+  /* font-style: normal; */
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #373737;
+  border-style: hidden;
+  background: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+}
+
+.UserItem:first-child {
+  margin-bottom: 16px;
+}
+
+.UserItem:last-child {
+  margin-bottom: 26px;
+}
