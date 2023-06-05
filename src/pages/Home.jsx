@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTweets, loadMoreTweets } from "../redux/operations";
@@ -27,7 +27,6 @@ const Home = () => {
   return (
     <>
       {filter && <Modal />}
-      {tweets?.users && <Navigate to="/" />}
 
       <Link to="/tweets">
         <Button text={"Tweets"} />
