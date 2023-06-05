@@ -1,10 +1,9 @@
-// import { configureStore } from '@reduxjs/toolkit';
-// import { listReducer } from './listSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import { tweetsReducer } from "./tweetsSlice";
 // import { filterReducer } from './filterSlice';
 
-// export const store = configureStore({
-//   reducer: {
-//     contacts: listReducer,
-//     filter: filterReducer,
-//   },
-// });
+export const store = configureStore({
+  reducer: {
+    tweets: tweetsReducer,
+  },
+});

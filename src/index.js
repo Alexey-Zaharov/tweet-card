@@ -7,27 +7,11 @@ import App from "./components/App";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <Provider store={store}>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>
+    </Provider>
+  </BrowserRouter>
+  // </React.StrictMode>
 );
-
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import { Provider } from "react-redux";
-// import { store } from "./redux/store";
-// import { BrowserRouter } from "react-router-dom";
-// import App from "./components/App";
-// import "./index.css";
-
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <BrowserRouter basename="/tweet-card">
-//       <Provider store={store}>
-//         <App />
-//       </Provider>
-//     </BrowserRouter>
-//   </React.StrictMode>
-// );
