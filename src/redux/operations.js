@@ -75,3 +75,22 @@ export const loadMoreTweets = createAsyncThunk(
     }
   }
 );
+
+export const fetchFiltredTweets = createAsyncThunk(
+  "filters/fetchFiltredTweets",
+  async (filter, thunkAPI) => {
+    try {
+      const respose = await fetch(
+        `https://6478ab27362560649a2e3b8f.mockapi.io/users?subscribed=${filter}`,
+        {
+          method: "GET",
+          headers: { "content-type": "application/json" },
+        }
+      );
+      // console.log(respose.json());
+      return respose.json();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

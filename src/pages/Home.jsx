@@ -1,27 +1,41 @@
-// import { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchTweets } from "../redux/operations";
-// import { Link } from "react-router-dom";
-// import CardList from "../components/CardList/CardList";
+import { Link, Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTweets, loadMoreTweets } from "../redux/operations";
+import CardList from "../components/CardList/CardList";
+import Button from "../components/Button/Button";
+import { setShowModal } from "../redux/filterSlice";
+import Modal from "../components/Modal/Modal";
 
 const Home = () => {
-  // const dispatch = useDispatch();
-  // const isLoading = useSelector((state) => state.tweets.isLoading);
-  // const error = useSelector((state) => state.tweets.error);
-  // const tweets = useSelector((state) => state.tweets);
+  const dispatch = useDispatch();
+  const tweets = useSelector((state) => state.tweets);
+  const filter = useSelector((state) => state.filters.modalToShow);
 
-  // useEffect(() => {
-  //   dispatch(fetchTweets());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchTweets());
+  }, [dispatch]);
 
-  // console.log(tweets.users);
+  const onLoad = () => {
+    dispatch(loadMoreTweets(tweets.currentPage));
+  };
+
+  const showModal = () => {
+    dispatch(setShowModal());
+  };
 
   return (
-    <div>
-      {/* {tweets?.users && <CardList />} */}
-      {/* <button type="button">Load More</button>
-      <Link to="/">Home</Link>{" "} */}
-    </div>
+    <>
+      {filter && <Modal />}
+      {tweets?.users && <Navigate to="/" />}
+
+      <Link to="/tweets">
+        <Button text={"Tweets"} />
+      </Link>
+      <Button text={"Filter"} onClick={showModal} />
+      {tweets?.users && <CardList />}
+      {tweets?.users && <Button onClick={onLoad} text={"Load More"} />}
+    </>
   );
 };
 

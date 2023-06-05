@@ -15,6 +15,9 @@
 }
 
 .UserList {
+}
+
+.UserItem {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 20px;
@@ -24,7 +27,12 @@
   text-align: center;
 }
 
-.UserItem {
+.UserItem:first-child {
+  margin-bottom: 16px;
+}
+
+.UserItem:last-child {
+  margin-bottom: 26px;
 }
 
 .UserCardLogo {
@@ -39,12 +47,10 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 88px;
-  /* background-image: url(./Picture.png); */
 }
 
 .UserPhoto {
   z-index: 999;
-
   position: absolute;
   width: 80px;
   height: 80px;
@@ -86,6 +92,7 @@
   height: 50px;
   margin-right: auto;
   margin-left: auto;
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -95,16 +102,14 @@
   background: #ebd8ff;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
+  cursor: pointer;
+}
+
+.UserCardButton:hover,
+.UserCardButton:focus {
+  color: white;
 }
 
 .IsSelected {
   background: #5cd3a8;
-}
-
-.UserItem:first-child {
-  margin-bottom: 16px;
-}
-
-.UserItem:last-child {
-  margin-bottom: 26px;
 }

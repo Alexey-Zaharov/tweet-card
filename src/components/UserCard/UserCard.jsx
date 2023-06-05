@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import PropTypes from "prop-types";
 import { ReactComponent as GoItLogo } from "./Logo.svg";
 import { subscribeTweet, unSubscribeTweet } from "../../redux/operations";
 import css from "./UserCard.module.css";
@@ -40,6 +41,13 @@ const UserCard = ({ id, tweets, followers, avatar, subscribed }) => {
       </button>
     </li>
   );
+};
+UserCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  tweets: PropTypes.number.isRequired,
+  followers: PropTypes.number.isRequired,
+  avatar: PropTypes.string.isRequired,
+  subscribed: PropTypes.bool.isRequired,
 };
 
 export default UserCard;
